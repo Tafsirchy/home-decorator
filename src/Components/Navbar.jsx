@@ -38,7 +38,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to="/" className="btn text-xl">
+        <Link to="/" className="btn text-2xl font-bold">
           Home Decore
         </Link>
       </div>
