@@ -8,10 +8,10 @@ const useProducts = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios("./furnitureData.json")
-        .then((res) => setProducts(res.data))
-        .catch(err => setError(err))
-        .finally(() => setLoading(false))
+    axios("../furnitureData.json")
+      .then((res) => setProducts(res.data))
+      .catch((err) => setError(err))
+      .finally(() => setLoading(false));
   }, []);
 
   return { products, loading, error };

@@ -2,6 +2,11 @@ import React from "react";
 import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
+  const activeNavStyle = ({ isActive }) =>
+    isActive ? "text-white  bg-cyan-800" : "";
+    
+    
+  
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -28,13 +33,19 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink className={activeNavStyle} to="/">
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/products">Products</NavLink>
+              <NavLink className={activeNavStyle} to="/products">
+                Products
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/wishlist">Wishlist</NavLink>
+              <NavLink className={activeNavStyle} to="/wishlist">
+                Wishlist
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -46,13 +57,19 @@ const Navbar = () => {
       <div className="navbar-end">
         <ul className="menu menu-horizontal px-1 hidden lg:flex">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink className={activeNavStyle} to="/">
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/products">Products</NavLink>
+            <NavLink className={activeNavStyle} to="/products">
+              Products
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/wishlist">Wishlist</NavLink>
+            <NavLink className={activeNavStyle} to="/wishlist">
+              Wishlist
+            </NavLink>
           </li>
         </ul>
         <NavLink to="/products" className="btn">

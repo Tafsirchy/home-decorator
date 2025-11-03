@@ -4,13 +4,14 @@ import Products from "../Pages/Products";
 import MainLayouts from "../Layouts/MainLayouts";
 import ErrorPage from "../Pages/ErrorPage";
 import Wishlist from "../Pages/Wishlist";
+import ProductDetails from "../Pages/ProductDetails";
 
 // named export
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts></MainLayouts>,
-    errorElement: <ErrorPage></ErrorPage>,
+    // errorElement: <ErrorPage></ErrorPage>,
     hydrateFallbackElement: <p>Loading...</p>,
     children: [
       {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: "/wishlist",
         element: <Wishlist></Wishlist>,
       },
+      {
+        path: "/products/:id",
+        element: <ProductDetails></ProductDetails>
+      }
     ],
   },
   {

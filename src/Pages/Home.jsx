@@ -10,7 +10,7 @@ const Home = () => {
     <div>
       <div className="flex justify-between py-5 items-center">
         <h1 className="text-3xl font-semibold">Featured Products</h1>
-        <Link className="btn btn-outline" to="/products">
+        <Link className="btn btn-outline"  to="/products">
           See All Product
         </Link>
       </div>
